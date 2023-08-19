@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./sass/index.css">
+</head>
+<body>
+  <div id="header">
+    <div id="logo">
+      SNEAKERS
+    </div>
+
+    <ul>
+      <li>collections</li>
+      <li>Men</li>
+      <li>Women</li>
+      <li>About</li>
+      <li>Contact</li>
+    </ul>
+
+    <div id="img-con" onclick="Onloader()" >
+    <img style="width: 5%;"  src="./images/icon-cart.svg" alt=""  >
+
+    <img style="width: 6%;" src="./images/image-avatar.png" alt="">
+
+    </div>
+     
+  </div>
+
+  <div id="opener">
+    <span>cart</span>
+    <div id="loader">
+      your cart is emty
+    </div>
+   </div>
+
+  <div id="contain">
+
+    <div id="cont-img">
+      <img id="imgpre" src="./images/icon-previous.svg" onclick="Moverfor(document.getElementById('imgpre').alt)"  alt="next">
+      <img src="" id="newimg" alt="">
+      <img  id="imgnext" src="./images/icon-next.svg"onclick="Moverfor(document.getElementById('imgnext').alt)" alt="pre">
+      <div id="img-wrap">
+        <img src="./images/" alt="">
+        <img src="" alt="">
+        <img src="" alt="">
+        <img src="" alt="">
+      </div>
+    </div>
+
+    <div id="cont-text">
+      <h6 style="color: orangered;" >SNEAKERS COMPANY</h6>
+      <h1 style="margin-top: 2vmin;">fall limited edition <br> sneaker </h1>
+      <p style="margin-top: 3vmin;color: grey;">Lorem ipsum, dolor sit amet consectetur adipisicing <br> elit. Beatae consectetur nostrum voluptatem corrupti <br> maiores sint dolorum animi nobis <br> exercitationem et.</p>
+
+      <span style="font-size: xx-large;font-weight:900 ;margin: 2%;" >$<span id="rate"></span>.00 <span style="font-size: medium; background-color: rgba(247, 120, 1, 0.269);border-radius: 20%;color: orangered;" >50%</span> <br> <span style="text-decoration: line-through;font-size: x-large;color: rgba(185, 183, 183, 0.986); ">$239.00</span></span>
+
+      <div id="cont-btn">
+        <div id="counter">
+          <span id="wass" style="color: orangered;" onclick="Caly(document.getElementById('wass').innerText)" >-</span>
+          <span id="vars" ></span>
+          <span id="was" style="color: orangered;cursor: pointer;" onclick="Caly(document.getElementById('was').innerText)">+</span>
+        </div>
+        <button> <img src="./images/icon-cart.svg" alt=""> Add to cart</button>
+        
+      </div>
+    </div>
+  </div>
+
+
+  <script>
+    let num = 0
+    const vars = document.getElementById('vars')
+    const openers = document.getElementById('opener')
+    const rate = document.getElementById('rate')
+    vars.innerHTML = num
+    let x = 125.00
+    rate.innerHTML = x
+    function Caly(e){
+      let dummy = 125.00
+    if(e == '+'){
+      num++
+      x = x+dummy
+      rate.innerHTML = x
+      vars.innerHTML = num
+
+    }
+    
+   else{
+    num--
+    x = x-dummy
+    rate.innerHTML = x
+    vars.innerHTML= num
+   }
+    }
+
+    function Onloader(){
+      if(openers.style.display == 'none'){
+        openers.style.display = 'flex'
+      }
+      else{
+        openers.style.display = 'none'
+      }
+    }
+
+    // let xyx = {
+    //   img0 : './images/icon-cart.svg',
+    //   img1 : "./images/image-product-1-thumbnail.jpg",
+    //   img2 : "./images/image-product-2-thumbnail.jpg",
+    //   img3 : "./images/image-product-3-thumbnail.jpg",
+    //   img4 : "./images/image-product-4-thumbnail.jpg"
+
+    // }
+    let ary = [
+    "./images/image-product-1-thumbnail.jpg",
+    "./images/image-product-2-thumbnail.jpg",
+    "./images/image-product-3-thumbnail.jpg",
+    "./images/image-product-4-thumbnail.jpg",
+  ]
+    const newimg = document.getElementById('newimg')
+    let num23 = 0
+    newimg.setAttribute('src',ary[num23])
+ 
+
+      function Moverfor(s){
+        
+
+        if(s == 'next' && num23 >= 0){
+          num23--
+          console.log(num23);
+          const newimg = document.getElementById('newimg')
+          newimg.setAttribute('src',ary[num23])
+        }
+        if(s == 'pre' && num23 <= 0){
+         
+          num23++
+        console.log(num23);
+        const newimg = document.getElementById('newimg')
+        newimg.setAttribute('src',ary[num23])
+        }
+        else{
+          
+        }
+
+      }
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,136 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  flex-direction: column;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+#cont-btn button, #cont-btn #counter, #cont-btn, #contain #cont-img, #contain, #opener #loader, #header #img-con, #header #logo, body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#header {
+  display: flex;
+  width: 85%;
+  border-bottom: 1px solid rgb(175, 175, 175);
+  padding-bottom: 0vmin;
+  height: 25vmin;
+  flex-direction: row;
+  align-items: center;
+  z-index: 0;
+}
+#header #logo {
+  font-size: xx-large;
+  font-weight: 900;
+  width: 20%;
+}
+#header ul {
+  width: 35%;
+  display: inline-flex;
+  justify-content: space-evenly;
+  color: gray;
+}
+#header ul li {
+  list-style: none;
+  cursor: pointer;
+}
+#header ul li:hover {
+  color: black;
+  -webkit-text-decoration: underline 3px orangered;
+          text-decoration: underline 3px orangered;
+}
+#header #img-con {
+  width: 50%;
+  justify-content: flex-end;
+}
+#header #img-con img {
+  margin: 0 3%;
+  cursor: pointer;
+}
+
+#opener {
+  position: absolute;
+  right: 15vmin;
+  top: 18vmin;
+  width: 28vmin;
+  height: 25vmin;
+  border-radius: 1vmin;
+  z-index: 1;
+  box-shadow: 1px 1px 19px 2px grey;
+  display: none;
+  align-items: center;
+  flex-direction: column;
+}
+#opener span {
+  display: flex;
+  height: 30%;
+  justify-content: flex-start;
+  width: 100%;
+  padding-top: 7%;
+  margin-left: 10%;
+}
+#opener #loader {
+  height: 40%;
+  color: grey;
+}
+
+#contain {
+  width: 85%;
+  align-items: center;
+  justify-content: space-evenly;
+}
+#contain #cont-img {
+  width: 60%;
+}
+#contain #cont-img #newimg {
+  width: 70%;
+  margin: 0 5%;
+}
+#contain #cont-text {
+  width: 50%;
+  height: 50vmin;
+  padding: 5%;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+#cont-btn {
+  width: 80%;
+  height: 10%;
+  justify-content: flex-start;
+}
+#cont-btn #counter {
+  width: 30%;
+  height: 100%;
+  border-radius: 1.5vmin;
+  justify-content: space-evenly;
+  background-color: rgb(209, 217, 224);
+  font-weight: 900;
+  margin-right: 3%;
+}
+#cont-btn #counter span {
+  text-decoration: none;
+}
+#cont-btn button {
+  width: 50%;
+  height: 100%;
+  background-color: orangered;
+  color: white;
+  border: none;
+  border-radius: 1.5vmin;
+  font-weight: 800;
+}
+#cont-btn button img {
+  margin: 0 5%;
+  filter: brightness(9);
+}/*# sourceMappingURL=index.css.map */
