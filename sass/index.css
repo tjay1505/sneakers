@@ -91,6 +91,9 @@ body {
 #contain #cont-img {
   width: 60%;
 }
+#contain #cont-img img {
+  transition: 0.4s;
+}
 #contain #cont-img #newimg {
   width: 70%;
   margin: 0 5%;

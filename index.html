@@ -39,9 +39,9 @@
   <div id="contain">
 
     <div id="cont-img">
-      <img id="imgpre" src="./images/icon-previous.svg" onclick="Moverfor(document.getElementById('imgpre').alt)"  alt="next">
+      <img id="imgpre" src="./images/icon-previous.svg" onclick="Moverfor(document.getElementById('imgpre').alt)"  alt="pre">
       <img src="" id="newimg" alt="">
-      <img  id="imgnext" src="./images/icon-next.svg"onclick="Moverfor(document.getElementById('imgnext').alt)" alt="pre">
+      <img  id="imgnext" src="./images/icon-next.svg"onclick="Moverfor(document.getElementById('imgnext').alt)" alt="next">
       <div id="img-wrap">
         <img src="./images/" alt="">
         <img src="" alt="">
@@ -70,81 +70,8 @@
   </div>
 
 
-  <script>
-    let num = 0
-    const vars = document.getElementById('vars')
-    const openers = document.getElementById('opener')
-    const rate = document.getElementById('rate')
-    vars.innerHTML = num
-    let x = 125.00
-    rate.innerHTML = x
-    function Caly(e){
-      let dummy = 125.00
-    if(e == '+'){
-      num++
-      x = x+dummy
-      rate.innerHTML = x
-      vars.innerHTML = num
-
-    }
-    
-   else{
-    num--
-    x = x-dummy
-    rate.innerHTML = x
-    vars.innerHTML= num
-   }
-    }
-
-    function Onloader(){
-      if(openers.style.display == 'none'){
-        openers.style.display = 'flex'
-      }
-      else{
-        openers.style.display = 'none'
-      }
-    }
-
-    // let xyx = {
-    //   img0 : './images/icon-cart.svg',
-    //   img1 : "./images/image-product-1-thumbnail.jpg",
-    //   img2 : "./images/image-product-2-thumbnail.jpg",
-    //   img3 : "./images/image-product-3-thumbnail.jpg",
-    //   img4 : "./images/image-product-4-thumbnail.jpg"
-
-    // }
-    let ary = [
-    "./images/image-product-1-thumbnail.jpg",
-    "./images/image-product-2-thumbnail.jpg",
-    "./images/image-product-3-thumbnail.jpg",
-    "./images/image-product-4-thumbnail.jpg",
-  ]
-    const newimg = document.getElementById('newimg')
-    let num23 = 0
-    newimg.setAttribute('src',ary[num23])
- 
-
-      function Moverfor(s){
-        
-
-        if(s == 'next' && num23 >= 0){
-          num23--
-          console.log(num23);
-          const newimg = document.getElementById('newimg')
-          newimg.setAttribute('src',ary[num23])
-        }
-        if(s == 'pre' && num23 <= 0){
-         
-          num23++
-        console.log(num23);
-        const newimg = document.getElementById('newimg')
-        newimg.setAttribute('src',ary[num23])
-        }
-        else{
-          
-        }
-
-      }
+  <script src="./venila.js" >
+   
 
   </script>
 </body>

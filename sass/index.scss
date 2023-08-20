@@ -100,6 +100,9 @@ body{
     justify-content: space-evenly;
     #cont-img{
         width: 60%;
+        img{
+            transition: 0.4s;
+        }
 
         @extend %centers;
         #newimg{
