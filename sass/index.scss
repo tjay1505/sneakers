@@ -146,7 +146,7 @@ body{
     align-items: center;
     justify-content: space-evenly;
     #total-wrap{
-        height: 70vh;
+        height: 60vh;
         width: 70%;
         display: flex;
         flex-direction: column;
@@ -269,6 +269,7 @@ body{
         #menu{
             display: block;
             width: 5vmin;
+            margin-right: 5%;
         }
         #logo{
             width: 50%;
@@ -277,10 +278,10 @@ body{
             display: none;
         }
         #img-con{
-            width: 50%;
+            width: 60%;
             height: 100%;
             img{
-                width: 6vmin;
+                width: 7.5vmin;
             }
         }
     }
@@ -308,19 +309,22 @@ body{
             }
             #img-wrap{
                 width: 90%;
+                height: 15%;
                 justify-content: space-between;
+                
             }
         }
         #cont-text{
             width: 100%;
             height: max-content;
+            
             margin-top: 5%;
             h6,h1{
                 width: 95%;
                 font-size: xx-large;
             }
             p{
-                font-size: large;
+                font-size: medium;
                 text-align: justify;
             }
             #cont-btn{
@@ -331,12 +335,12 @@ body{
                 align-items: self-start;
                 justify-content: space-between;
                 #counter{
-                    width: 95%;
+                    width: 99%;
                     height: 45%;
                     margin: 0;
                 }
                 button{
-                    width: 95%;
+                    width: 99%;
                     height: 45%;
                 }
             }

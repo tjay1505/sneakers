@@ -134,7 +134,7 @@ body {
   justify-content: space-evenly;
 }
 #contain #total-wrap {
-  height: 70vh;
+  height: 60vh;
   width: 70%;
   display: flex;
   flex-direction: column;
@@ -241,6 +241,7 @@ body {
   #header #menu {
     display: block;
     width: 5vmin;
+    margin-right: 5%;
   }
   #header #logo {
     width: 50%;
@@ -249,11 +250,11 @@ body {
     display: none;
   }
   #header #img-con {
-    width: 50%;
+    width: 60%;
     height: 100%;
   }
   #header #img-con img {
-    width: 6vmin;
+    width: 7.5vmin;
   }
   #contain {
     flex-direction: column;
@@ -281,6 +282,7 @@ body {
   }
   #contain #total-wrap #img-wrap {
     width: 90%;
+    height: 15%;
     justify-content: space-between;
   }
   #contain #cont-text {
@@ -294,7 +296,7 @@ body {
     font-size: xx-large;
   }
   #contain #cont-text p {
-    font-size: large;
+    font-size: medium;
     text-align: justify;
   }
   #contain #cont-text #cont-btn {
@@ -306,12 +308,12 @@ body {
     justify-content: space-between;
   }
   #contain #cont-text #cont-btn #counter {
-    width: 95%;
+    width: 99%;
     height: 45%;
     margin: 0;
   }
   #contain #cont-text #cont-btn button {
-    width: 95%;
+    width: 99%;
     height: 45%;
   }
   #opener {
