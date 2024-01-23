@@ -8,6 +8,7 @@
 </head>
 <body>
   <div id="header">
+    <img src="./images/icon-menu.svg" id="menu" alt="" onclick="openMenu(true)">
     <div id="logo">
       SNEAKERS
     </div>
@@ -21,58 +22,75 @@
     </ul>
 
     <div id="img-con" onclick="Onloader()" >
-    <img style="width: 5%;"  src="./images/icon-cart.svg" alt=""  >
+    <img style="padding-bottom: 1%;"  src="./images/icon-cart.svg" alt=""  id="cartIcon">
 
-    <img style="width: 6%;" src="./images/image-avatar.png" alt="">
+    <img style="padding-bottom: 1%;" src="./images/image-avatar.png" alt="">
 
     </div>
      
   </div>
 
   <div id="opener">
-    <span>cart</span>
+    <span>cart</span> 
+    <span id="emptyC" style="color: gray;" >your cart is empty</span>
     <div id="loader">
-      your cart is emty
+      <img src="./images/image-product-1-thumbnail.jpg" id="tn" alt="">
+      <span id="p2">$125.00 &nbsp;*&nbsp;<em id="number">3&nbsp;</em>=&nbsp;<b id="prices">$345.00</b></span>
+      <img id="dl" src="./images/icon-delete.svg" alt="" onclick="clearCart()">
+      <button id="bt" >Check Out</button>
     </div>
-   </div>
+  </div>
 
-  <div id="contain">
-
+  <div id="contain" class="unselectable">
+   <div id="total-wrap">
     <div id="cont-img">
       <img id="imgpre" src="./images/icon-previous.svg" onclick="Moverfor(document.getElementById('imgpre').alt)"  alt="pre">
-      <img src="" id="newimg" alt="">
+      <img src="" id="newimg" alt="" onclick="productView(event)">
       <img  id="imgnext" src="./images/icon-next.svg"onclick="Moverfor(document.getElementById('imgnext').alt)" alt="next">
-      <div id="img-wrap">
-        <img src="./images/" alt="">
-        <img src="" alt="">
-        <img src="" alt="">
-        <img src="" alt="">
-      </div>
     </div>
-
-    <div id="cont-text">
+    <div id="img-wrap">
+      <img src="./images/image-product-1-thumbnail.jpg" onclick="thumbnailFunc(1)" alt="">
+      <img src="./images/image-product-2-thumbnail.jpg" onclick="thumbnailFunc(2)" alt="">
+      <img src="./images/image-product-3-thumbnail.jpg" onclick="thumbnailFunc(3)" alt="">
+      <img src="./images/image-product-4-thumbnail.jpg" onclick="thumbnailFunc(4)" alt="">
+    </div>
+  </div>
+    <div id="cont-text" class="unselectable">
       <h6 style="color: orangered;" >SNEAKERS COMPANY</h6>
       <h1 style="margin-top: 2vmin;">fall limited edition <br> sneaker </h1>
       <p style="margin-top: 3vmin;color: grey;">Lorem ipsum, dolor sit amet consectetur adipisicing <br> elit. Beatae consectetur nostrum voluptatem corrupti <br> maiores sint dolorum animi nobis <br> exercitationem et.</p>
 
-      <span style="font-size: xx-large;font-weight:900 ;margin: 2%;" >$<span id="rate"></span>.00 <span style="font-size: medium; background-color: rgba(247, 120, 1, 0.269);border-radius: 20%;color: orangered;" >50%</span> <br> <span style="text-decoration: line-through;font-size: x-large;color: rgba(185, 183, 183, 0.986); ">$239.00</span></span>
+      <span style="font-size: xx-large;font-weight:900 ;margin: 2%;" >$125.00<span id="rate"></span> <span style="font-size: medium; background-color: rgba(247, 120, 1, 0.269);border-radius: 20%;color: orangered;" >50%</span> <br> <span style="text-decoration: line-through;font-size: x-large;color: rgba(185, 183, 183, 0.986); ">$239.00</span></span>
 
       <div id="cont-btn">
         <div id="counter">
-          <span id="wass" style="color: orangered;" onclick="Caly(document.getElementById('wass').innerText)" >-</span>
+          <span id="wass" style="color: orangered;cursor: pointer;font-size: x-large;" onclick="Caly(document.getElementById('wass').innerText)" >-</span>
           <span id="vars" ></span>
-          <span id="was" style="color: orangered;cursor: pointer;" onclick="Caly(document.getElementById('was').innerText)">+</span>
+          <span id="was" style="color: orangered;cursor: pointer;font-size: x-large;" onclick="Caly(document.getElementById('was').innerText)">+</span>
         </div>
-        <button> <img src="./images/icon-cart.svg" alt=""> Add to cart</button>
+        <button onclick="cartLoader()"> <img src="./images/icon-cart.svg" alt=""> Add to cart</button>
         
       </div>
     </div>
   </div>
 
+  <div id="gallery">
+    <img src="./images/icon-close.svg" id="imgwer" onclick="closeFunc()" alt="">
+    <img src="./images/image-product-1.jpg" id="main-img" alt="">
+  </div>
 
+  <div id="menuBox">
+    <img src="./images/icon-close.svg" alt="" onclick="openMenu(false)">
+    <ul>
+    <li>Men</li>
+    <li>women</li>
+    <li>collection</li>
+    <li>about</li>
+    <li>contact</li>
+  </ul>
+  </div>
   <script src="./venila.js" >
    
-
   </script>
 </body>
 </html>

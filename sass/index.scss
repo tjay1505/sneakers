@@ -2,6 +2,14 @@
     padding: 0;
     margin: 0;
 }
+.unselectable {
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    //color: #cc0000;
+  }
 html{
     scroll-behavior: smooth;
 }
@@ -19,14 +27,15 @@ body{
 
 #header{
     display: flex;
-    
     width: 85%;
     border-bottom: 1px solid rgb(175, 175, 175);
-    padding-bottom: 0vmin;
-    height: 25vmin;
+    height: 15vmin;
     flex-direction: row;
     align-items: center;
     z-index: 0;
+    #menu{
+        display: none;
+    }
     #logo{
         font-size: xx-large;
         font-weight: 900;
@@ -58,6 +67,7 @@ body{
         img{
             margin: 0 3%;
             cursor:pointer;
+            width: 6%;
 
         }
         
@@ -67,9 +77,10 @@ body{
 
 #opener{
     position: absolute;
-    right: 15vmin;
-    top: 18vmin;
-    width: 28vmin;
+    right: 5vmin;
+    top: 16vmin;
+    width: 30vmin;
+    background-color: #fff;
     height: 25vmin;
     border-radius: 1vmin;
     z-index: 1;
@@ -83,12 +94,48 @@ body{
         justify-content: flex-start;
         width: 100%;
         padding-top: 7%;
+        font-size: large;
         margin-left: 10% 
     }
     #loader{
-        height: 40%;
-        @extend %centers;
-        color: grey
+        border-top: 0.5px solid grey;
+        height: 100%;
+        width: 100%;
+        color: grey;
+        display: none;
+        place-items: center;
+        #tn{
+            grid-area: tn;
+            width: 7vmin;
+            border-radius: 1vmin;
+        }
+        
+        #p2{
+            grid-area: p2;
+            font-size: small;
+           color: rgb(59, 59, 59);
+           width: 100%;
+        }
+        #dl{
+            width: 2.5vmin;
+            grid-area: dl;
+        }
+        #bt{
+            grid-area: bt;
+            width: 90%;
+            height:80%;
+            margin-bottom: 2%;
+            border: none;
+            border-radius: 1vmin;
+            background-color: orangered;
+            color: #fff;
+        }
+        #bt:hover{
+            background-color: rgb(247, 121, 75);
+        }
+        grid-template-areas: " tn p2 dl"
+                             " bt bt bt";
+
     }
 
 }
@@ -98,8 +145,15 @@ body{
     width: 85%;
     align-items: center;
     justify-content: space-evenly;
+    #total-wrap{
+        height: 70vh;
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     #cont-img{
-        width: 60%;
+        width: 95%;
+        height: 60vh;
         img{
             transition: 0.4s;
         }
@@ -108,8 +162,9 @@ body{
         #newimg{
             width: 70%;
             margin: 0 5%;
-
+            
         }
+    }
     }
     #cont-text{
         width: 50%;
@@ -117,8 +172,26 @@ body{
         padding: 5%;
         display: flex;
         align-items: flex-start;
-        
+        justify-content: space-evenly;
         flex-direction: column;
+    }
+}
+
+
+
+#img-wrap{
+    height: 12vmin;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    img{
+        height: 100%;
+        border-radius: 1vmin;
+    }
+    img:hover{
+        filter:grayscale(1);
+        cursor: pointer;
     }
 }
 
@@ -157,4 +230,156 @@ body{
             filter: brightness(9);
         }
     }
+    button:hover{
+        background-color: rgb(247, 121, 75);
+        cursor: pointer;
+    }
 }
+#gallery{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.785);
+    position: absolute;
+    display: none;
+   // place-items: center;
+    
+    #imgwer{
+        border: 1px solid white;
+        width: 8vmin;
+        //filter: invert(1);
+        position: absolute;
+        top: 10vmin;
+        left: 5vmin;
+    }
+    img{
+        width: 70vmin;
+        border-radius: 1vmin;
+        position: relative;
+        top: 25%;
+        left: 30%;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    body {
+      
+    }
+    #header{
+        justify-content: space-around;
+        #menu{
+            display: block;
+            width: 5vmin;
+        }
+        #logo{
+            width: 50%;
+        }
+        ul{
+            display: none;
+        }
+        #img-con{
+            width: 50%;
+            height: 100%;
+            img{
+                width: 6vmin;
+            }
+        }
+    }
+    #contain{
+        flex-direction: column;
+        #total-wrap{
+            width: 100%;
+            #cont-img{
+                width: 95%;
+                #imgpre{
+                    position: relative;
+                    left: 10vmin;
+                    height: 6vmin;
+                    filter: invert(1);
+                }
+                #imgnext{
+                    position: relative;
+                    right: 10vmin;
+                    height: 6vmin;
+                    filter: invert(1);
+                }
+                #newimg{
+                    width: 100%;
+                }
+            }
+            #img-wrap{
+                width: 90%;
+                justify-content: space-between;
+            }
+        }
+        #cont-text{
+            width: 100%;
+            height: max-content;
+            margin-top: 5%;
+            h6,h1{
+                width: 95%;
+                font-size: xx-large;
+            }
+            p{
+                font-size: large;
+                text-align: justify;
+            }
+            #cont-btn{
+                width: 100%;
+                height: 15vh;
+                display: flex;
+                flex-direction: column;
+                align-items: self-start;
+                justify-content: space-between;
+                #counter{
+                    width: 95%;
+                    height: 45%;
+                    margin: 0;
+                }
+                button{
+                    width: 95%;
+                    height: 45%;
+                }
+            }
+        }
+    }
+    #opener{
+        width: 90%;
+        height: 30%;
+        margin: 0;
+        .p2{
+            font-size: larger;
+        }
+    }
+   
+  }
+
+  #menuBox{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 60vw;
+    display: none;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #fff;
+    img{
+        width: 15%;
+        position: relative;
+        top: 10vmin;
+        left: 20vmin;
+    }
+    ul{
+        margin-top: 25%;
+        li{
+            list-style: none;
+            border-bottom: 1px solid grey;
+            font-size: 250%;
+
+        }
+        li:hover{
+            color: gray;
+        }
+    }
+
+  }
